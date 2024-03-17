@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
 
 # 加载训练好的模型和Scaler
-model = load('D:/Desktop/streamlit/model.joblib')
-scaler = load('D:/Desktop/streamlit/scaler.joblib')
+model = load('model.joblib')
+scaler = load('scaler.joblib')
 
 # 初始化SHAP解释器（确保你的模型和数据预处理步骤兼容SHAP）
 explainer = shap.TreeExplainer(model)
