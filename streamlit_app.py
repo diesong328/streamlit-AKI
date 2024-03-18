@@ -59,7 +59,7 @@ def main():
         prediction = model.predict(input_scaled)
         prediction_proba = model.predict_proba(input_scaled)
 
-        st.write(f"### Prediction Result: {'AKI' if prediction[0] == 1 else 'No AKI'}")
+        st.write(f"### Prediction Result: {'persistent SA-AKI' if prediction[0] == 1 else 'No persistent SA-AKI'}")
         st.write(f"### Prediction Probability: {prediction_proba[0][1]:.4f}")
         
         # Calculate SHAP values using the explainer
